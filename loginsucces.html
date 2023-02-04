@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Design</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:Arial, Helvetica, sans-serif;
+           
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            background: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .pop{
+            width: 400px;
+            background: black;
+            border-radius: 6px;
+            margin-top: 24%;
+            margin-left: 40%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+            padding: 0 30px 30px;
+            color: #333;
+        }
+        .pop img{
+            width: 100px;
+            margin-top: -50px;
+            border-radius: 50%;
+            box-shadow: 0 7px 5px rgb(42, 2, 2);
+                }
+                .pop h2{
+                    font-size: 39px;
+                    font-weight: 500;
+                    margin: 30px 0 10px;
+                }
+                .pop button{
+                    width: 100%;
+                    margin-top: 50px;
+                    padding: 10px 0;
+                    background: rgb(54, 21, 21);
+                    color: white;
+                    border: 0;
+                    outline: none;
+                    font-size: 18px;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    box-shadow: 0 2px 5px rgb(42, 2, 2);             
+                }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="pop">
+            <img src="tick.jpg" alt="">
+            <h2>Thank You!!!</h2>
+            <p>Your have successfully logged in your account</p>
+            <button type="button">Ok</button>
+            <button type="button">Skip</button>
+        </div>
+    </div>
+    
+</body>
+</html>

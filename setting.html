@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My account and settings</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition:1s ease ;
+}
+body{
+    background-image: linear-gradient(45deg, #0e0f0f, #070505);
+    background-size: cover;
+    background-attachment: fixed;
+    perspective: 1000px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    min-height: 100vh;
+    background: bisque; */
+}
+
+.container{
+    position: absolute;
+    width: 500px;
+    height: 650px;
+    background-color: rgb(8, 9, 9);
+    left: calc(50% - 235px);
+    top: calc(50% - 20px);
+    padding: 70px 40px;
+    box-shadow: 0px 0px 8px #2c0219, 0px 0px 30px #430612;
+    color: white;
+    
+    /* transform: rotateY(-90deg); */
+}
+h1{
+    font-size: 40px;
+    font-weight: 500px;
+    text-shadow: 20px 18px 17px royalblue ;
+    font-style: italic;
+}
+
+.profile i{ 
+
+    align-items: center;
+    font-size: 90px;
+    padding-left: 160px;
+   
+}
+.profile h3{
+    font-size: 25px;
+    font-style: normal;
+
+}
+.profile ul li{
+    font-size: larger;
+}
+</style>
+<body>
+    <div class="container">
+ <h1>Welcome to myApp<br> Account Settings </h1>
+<br><br>
+<div class="profile">
+    <i class="fa-solid fa-user"></i>
+    <br><br>
+    <h3>My Profiles</h3>
+    <br>
+    <ul type="circle">
+        <li>Username</li>
+        <li>themes</li>
+        <li>Profile Picture</li>
+    </ul>
+    <br>
+    <label for="prof">Upload a profile picture</label>
+    <input type="file" name="profile">
+</div>
+  
+</div>
+</body>
+</html>

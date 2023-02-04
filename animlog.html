@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login _Page</title>
+    <!-- <link rel="stylesheet" href="./animlog.css"> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition:1s ease ;
+}
+body{
+    background-image: linear-gradient(45deg, #00a6ff, #ffffff);
+    background-size: cover;
+    background-attachment: fixed;
+    perspective: 1000px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    min-height: 100vh;
+    background: bisque; */
+}
+
+.box{
+    position: absolute;
+    width: 270px;
+    height: 100px;
+    background: none;
+    left: calc(50% - 175px);
+    top: calc(50% - 60px);
+    transform-style: preserve-3d;
+    /* transform: rotateY(-90deg); */
+}
+.box div{
+
+    width: 370px;
+    height: 556px;
+    position: absolute;
+    background-image: radial-gradient(#fff, #71d6d1);
+    box-shadow: -3px -3px 25px rgb(43, 157, 157),
+    inset -3px -3px 15px rgb(63, 163, 171),
+    inset -3px -3px 15px rgb(20, 138, 156);
+    border: 5px solid #7bf4ff;
+
+}
+
+.box div:nth-child(5){
+    height: 556px;
+    box-shadow: 0px 0px 10px #00a6ff, 0px 0px 30px #00a6ff;
+}
+.a{transform: rotateY(0deg) translateZ(175px);}
+.b{transform: rotateY(90deg) translateZ(175px);}
+.c{transform: rotateY(180deg) translateZ(175px);}
+.d{transform: rotateY(270deg) translateZ(175px);}
+.e{transform: rotateX(-90deg) translateZ(325px);}
+.a label{ 
+    position: relative;
+    width: 200px;
+    left: 65px;
+    top: 170px;
+    color: white;
+    font-size: 18px;
+    height: 50px;
+    line-height: 50px;
+    margin: 20px 0px;
+    text-align: center;
+    display: block;
+    background-image: linear-gradient(45deg, #2a89b8, #266585);
+    border-radius: 25px;  
+    cursor: pointer;
+    box-shadow: 0px 0px 8px #296ca7, 0px 0px 30px #2a6488;
+     
+}
+#sup, #btn{
+    background-image: linear-gradient(45deg, #1b578f,#082858);
+    color: rgb(3, 4, 18);
+    cursor: pointer;
+
+}
+#btn:focus{
+    width: calc(100% - 80px);
+    left: 40px;
+}
+.title{
+    width: 100%;
+    text-align: center;
+    line-height: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #08324a;
+
+}
+.frm input{
+    position: relative;
+    width: calc(100% - 90px);
+    left: 40px;
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    top: 50px;
+    background: none;
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0px 0px 5px #4451ff, 0px 0px 30px #033e78;
+    margin: 20px 0px;
+    font-size: 16px;
+}
+.frm input:focus{
+    width: calc(100% - 40px);
+    left: 20px;
+    background: #c2d5e8;
+    box-shadow: 0px 0px 5px #182388, 0px 0px 30px #133088;
+    
+}
+#btm{
+    position: absolute;
+    bottom: 20px;
+    font-size: 20px;
+    color: #030b57;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+
+}
+
+
+#chk1:checked ~ .box{
+    transform: rotateY(-180deg);
+}
+#chk2:checked ~ .box{
+    transform: rotateY(-90deg);
+}
+    </style>
+</head>
+<body>
+    <input type="radio" id="chk1" name="al" style="display: none;" required>
+    <input type="radio" id="chk2" name="al" style="display: none;" required>
+
+    <div class="box">
+        <div class="a">
+            <label for="chk1">Log In</label>
+            <label for="chk2" id="sup">Sign Up</label>
+        </div>
+        <div class="b">
+            <form action="/sign" class="frm" method="post">
+                
+                <h6 class="title">SIGN-UP FORM</h6>
+                <input type="text"  name="fname" placeholder="Full Names" required>
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="text" name="email" placeholder="Email Adress" required>
+                <input type="password" name="password1" placeholder="Create Password" required>
+                <input type="password" name="password2" placeholder="Confirm Password" required>
+                <input type="submit" value="Sign Up" id="btn">
+                <!-- <button type="submit" id="btn">Sign Up</button> -->
+                <label for="chk1" id="btm">Login here</label>
+            </form>
+        </div>
+        <div class="c">
+            <form action="/login" class="frm" method="post">
+                <br><br><br><br><br><br>
+
+                <h6 class="title">Login Form</h6>
+                <input type="text" name="orgname" placeholder="Username or Email" required>            
+                <input type="password" name="orgpass" placeholder="Enter Password"   required>
+                <input type="submit" value="Login" id="btn">
+
+                <label for="chk2" id="btm">Signup here</label>
+                </form>
+        </div>
+        <div class="d"></div>
+        <div class="e"></div>
+    </div>
+    <script src="./animated_login .js"></script>
+</body>
+</html>
